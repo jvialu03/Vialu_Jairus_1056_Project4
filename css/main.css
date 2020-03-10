@@ -2,6 +2,10 @@ body {
   font-family: Helvetica, Arial, sans-serif;
 }
 
+.hidden {
+  display: none;
+}
+
 .container {
   margin: 0 auto;
   background-color: #efefef;
@@ -11,8 +15,7 @@ body {
   flex-wrap: wrap;
 }
 
-.box {
-  background-color: #8ea86e;
+.col {
   color: #fff;
   border-radius: 5px;
   padding: 20px;
@@ -21,6 +24,34 @@ body {
   flex: 1 1;
 }
 
-/* flex-grow
-flex-shrink
-flex-basis */
+.col1 {
+  background-color: blue;
+}
+
+.col2 {
+  background-color: purple;
+}
+
+.col3 {
+  background-color: grey;
+}
+
+.col4 {
+  background-color: brown;
+}
+
+@media screen and (max-width: 641px) {
+  .col {
+    flex: 1 1 500px;
+  }
+  .col1 {
+    background-color: pink;
+  }
+  .col2 {
+    background-color: red;
+  }
+
+  .col3, .col4 {
+    display: none;
+  }
+}
